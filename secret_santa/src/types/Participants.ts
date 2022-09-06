@@ -1,12 +1,16 @@
-type Email = string;
+import { O } from '@mobily/ts-belt'
+
+type Email = string
+type ParticipantID = string
 
 interface Participant {
-  FirstName: string;
-  LastName: string;
-  Email: Email;
-  Partner: Participant;
-  PreviousPair: Participant;
-  CurrentPair: Participant;
+  ID: ParticipantID
+  FirstName: string
+  LastName: string
+  Email: Email
+  Partner: O.Option<Participant>
+  PreviousPair: O.Option<Participant>
+  CurrentPair: O.Option<Participant>
 }
 
-export type { Participant };
+export type { Participant }

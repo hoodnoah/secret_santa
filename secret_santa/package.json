@@ -13,6 +13,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@mobily/ts-belt": "^3.13.1",
     "pinia": "^2.0.14",
     "vue": "^3.2.36"
   },
