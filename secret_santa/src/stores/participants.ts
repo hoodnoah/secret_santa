@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import {v4 as uuidv4} from "uuid"
 import {A, O} from "@mobily/ts-belt"
 import type { Participant } from '@/types/Participants'
 import { compareParticipants } from '@/util/ParticipantOps'
@@ -15,7 +16,8 @@ export const useParticipantStore = defineStore({
   },
   actions: {
     addParticipant(pt: NewParticipant) {
-      this.participants = [...this.participants, pt]
+      const ptWithID = {...pt, ID: uuidv4()}
+      this.participants = [...this.participants, ptWithID]
     },
     removeParticipant(pt: Participant) {
       this.participants = this.participants.filter(
