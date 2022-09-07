@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ParticipantInput from '@/components/ParticipantInput.vue'
+import ParticipantInput from "@/components/ParticipantInput/ParticipantInput.vue"
 </script>
 
 <template>
